@@ -10,6 +10,10 @@ public class Smelter : MonoBehaviour {
     public CoalSlotFurnace CoalSlot;
     public InputSlotFurnace InputSlot;
     public Slider Slider;
+    public int CreatedBlockID;
+    public string SmeltedBlock;
+    public int numberBlockCreated;
+    public OutputSlotFurnace OutputSlot;
     public bool isWorking = false;
     
 	#endregion
@@ -19,7 +23,7 @@ public class Smelter : MonoBehaviour {
 	void Start () {
         CoalSlot = GetComponentInChildren<CoalSlotFurnace>();
         InputSlot = GetComponentInChildren<InputSlotFurnace>();
-        
+        OutputSlot = GetComponentInChildren<OutputSlotFurnace>();
 	}
 	
 	
@@ -30,8 +34,10 @@ public class Smelter : MonoBehaviour {
             {
                 isWorking = true;
                 CoalSlot.GetComponent<CoalSlotFurnace>().CoalBar.value -= 10;
-                BlockInfoClass SmeltedBlock = InputSlot.GetComponent<Slots>().StockedObject;
+                SmeltedBlock = InputSlot.GetComponent<Slots>().StockedObject.ID ;
+                
                 InputSlot.GetComponent<Slots>().numberObjects -= 1;
+                StartCoroutine(ProgressBar());
 
                 
 
@@ -39,7 +45,34 @@ public class Smelter : MonoBehaviour {
         }
 	}
 
+    IEnumerator ProgressBar()
+    {
+        while (Slider.value < Slider.maxValue)
+        {
+            yield return new WaitForSeconds(0.01f);
+            Slider.value += 0.2f;
+        }
+        gameObject.SendMessage("OutputSet");
+        
+    }
 	#endregion
+
+    void OutputSet()
+    {
+        switch (SmeltedBlock)
+        {
+            case "1":
+                CreatedBlockID = 2;
+                numberBlockCreated = 1;
+                break;
+
+        }
+
+        OutputSlot.GetComponent<Slots>().numberObjects += numberBlockCreated;
+        OutputSlot.GetComponent<Slots>().StockedObject = GameObject.FindGameObjectWithTag("List").GetComponent<BlockList>().BlocksID[CreatedBlockID];
+        Slider.value = 0;
+        isWorking = false;
+    }
 
 	#region Other Methods
 
