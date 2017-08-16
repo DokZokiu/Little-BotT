@@ -19,6 +19,7 @@ public class OutputSlotFurnace : MonoBehaviour {
         if (GetComponent<Slots>().numberObjects > 0)
         {
             GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().AddItem(GetComponent<Slots>().numberObjects, GetComponent<Slots>().StockedObject);
+            GetComponent<Slots>().ClearSlot();
         }
     }
 }
