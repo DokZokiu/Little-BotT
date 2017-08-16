@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2625,7 +2625,7 @@ MonoBehaviour:
     SpriteName: {fileID: 21300000, guid: e8789374a22c2c448b5cf7f98ce96e7e, type: 3}
     BlockObjectName: {fileID: 0}
     CanMelt: 0
-  - Name: IronFurnace
+  - Name: StoneFurnace
     ID: 3
     SpriteName: {fileID: 21300000, guid: ebe0ad0e52ddad44181c1d458f438109, type: 3}
     BlockObjectName: {fileID: 1354005629161690, guid: f60af3c093a05304b8ea90abb94b127f,
@@ -2639,6 +2639,11 @@ MonoBehaviour:
   - Name: StoneChunks
     ID: 5
     SpriteName: {fileID: 21300000, guid: 5c10008b03e9144489b458e4f0144d42, type: 3}
+    BlockObjectName: {fileID: 0}
+    CanMelt: 0
+  - Name: CuttedStone
+    ID: 6
+    SpriteName: {fileID: 21300000, guid: 27af42c3a541d824dbf584c6a6cc674b, type: 3}
     BlockObjectName: {fileID: 0}
     CanMelt: 0
 --- !u!1001 &1006629447
@@ -3493,17 +3498,21 @@ Prefab:
     - target: {fileID: 224088080861503170, guid: f60af3c093a05304b8ea90abb94b127f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224088080861503170, guid: f60af3c093a05304b8ea90abb94b127f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224716156455038354, guid: f60af3c093a05304b8ea90abb94b127f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354005629161690, guid: f60af3c093a05304b8ea90abb94b127f, type: 2}
+      propertyPath: m_Name
+      value: StoneFurnace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f60af3c093a05304b8ea90abb94b127f, type: 2}
@@ -7948,21 +7957,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CraftList:
-  - Name: PureIronCraft
+  - Name: CuttedStoneCraft
     CraftID: 0
     Need:
-    - Name: '2 : Iron Chunk'
+    - Name: '2 : Stone Chunks'
       number: 2
-      ObjectID: 1
-    ResultID: 2
+      ObjectID: 5
+    ResultID: 6
     NumberResult: 1
     craftLevel: 0
-  - Name: IronFurnaceCraft
+  - Name: StoneCraftFurnace
     CraftID: 1
     Need:
-    - Name: '10 : Pure Iron'
+    - Name: '10 : Cutted Stone'
       number: 10
-      ObjectID: 2
+      ObjectID: 6
     ResultID: 3
     NumberResult: 1
     craftLevel: 0

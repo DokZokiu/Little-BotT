@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 114674390159305438}
   - component: {fileID: 114054879778193894}
   m_Layer: 8
-  m_Name: IronFurnace
+  m_Name: StoneFurnace
   m_TagString: Solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
