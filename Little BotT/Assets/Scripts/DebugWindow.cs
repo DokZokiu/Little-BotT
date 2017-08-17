@@ -46,6 +46,14 @@ public class DebugWindow : EditorWindow {
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().SetItem(slot, addnumber, GameObject.Find("List").GetComponent<BlockList>().BlocksID[selectedBlock]);
         }
+        if (GUILayout.Button("Clear All Slots"))
+        {
+            foreach (GameObject Slot in GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().Slots)
+            {
+                Slot.GetComponent<Slots>().ClearSlot();
+            }
+            
+        }
     }
 
     #region Other Methods

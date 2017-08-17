@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 65079597590733622}
   - component: {fileID: 54973289952217444}
   - component: {fileID: 114795093934847136}
+  - component: {fileID: 114850099247746802}
   m_Layer: 8
   m_Name: StoneOre
   m_TagString: Untagged
@@ -313,3 +314,15 @@ MonoBehaviour:
   DropID: 5
   NumberDrop: 2
   Slider: {fileID: 0}
+--- !u!114 &114850099247746802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815844736673958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe399b6b677c39488849efa84608240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collided: 0
