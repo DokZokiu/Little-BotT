@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4456758, g: 0.49537474, b: 0.57421845, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2688,6 +2688,12 @@ MonoBehaviour:
     SpriteName: {fileID: 21300000, guid: 27af42c3a541d824dbf584c6a6cc674b, type: 3}
     BlockObjectName: {fileID: 0}
     CanMelt: 0
+  - Name: EnergieAccumulator
+    ID: 7
+    SpriteName: {fileID: 21300000, guid: 1bf8cf0d5a894524abc3c26892423d8c, type: 3}
+    BlockObjectName: {fileID: 1597960861326038, guid: 3154e5845055dec4a8312b20e0d37eb8,
+      type: 2}
+    CanMelt: 0
 --- !u!1001 &1006629447
 Prefab:
   m_ObjectHideFlags: 0
@@ -2936,6 +2942,48 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224307405952231616, guid: 20e76fd0dc8c8284ea71e47649a6ccfa,
     type: 2}
   m_PrefabInternal: {fileID: 1068347872}
+--- !u!1001 &1017101537
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 27.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737288934996626, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3154e5845055dec4a8312b20e0d37eb8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1022402507
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,13 +5608,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577475565}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.85753167, y: 0.10431803, z: 0.14940514, w: 0.4810773}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.552002, y: 144.09201, z: 147.95001}
 --- !u!1001 &1581763052
 Prefab:
   m_ObjectHideFlags: 0
@@ -6739,12 +6787,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StockedObject:
-    Name: 
-    ID: 
-    SpriteName: {fileID: 0}
-    BlockObjectName: {fileID: 0}
+    Name: EnergieAccumulator
+    ID: 7
+    SpriteName: {fileID: 21300000, guid: 1bf8cf0d5a894524abc3c26892423d8c, type: 3}
+    BlockObjectName: {fileID: 1597960861326038, guid: 3154e5845055dec4a8312b20e0d37eb8,
+      type: 2}
     CanMelt: 0
-  numberObjects: 0
+  numberObjects: 1
   BlockCounter: {fileID: 0}
   Icone: {fileID: 0}
   EmptyIcon: 1
